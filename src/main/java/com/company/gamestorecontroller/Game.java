@@ -27,7 +27,7 @@ public class Game {
     @Length(max=50)
     private String studio;
     @Length(max=11)
-    private int quantity;
+    private Integer quantity;
 
     public Integer getGameId() {
         return gameId;
