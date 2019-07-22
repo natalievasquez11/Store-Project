@@ -45,5 +45,19 @@ public class GameController {
         gameService.deleteGame(id);
     }
 
+    @RequestMapping(value="/studio/{studio}", method= RequestMethod.GET)
+    public List<Game> getStudio(String studio) {
+        return gameService.getByStudio(studio);
+    }
+
+    @RequestMapping(value="/rating/{rating}", method= RequestMethod.GET)
+    public List<Game> getRating(Integer ersbRating) {
+        return gameService.getByRating(ersbRating);
+    }
+
+    @RequestMapping(value="/title/{title}", method= RequestMethod.GET)
+    public List<Game> getTitle(String title) {
+        return gameService.getByTitle(title);
+    }
 
 }

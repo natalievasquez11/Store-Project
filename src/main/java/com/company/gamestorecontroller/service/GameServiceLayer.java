@@ -34,4 +34,16 @@ public class GameServiceLayer {
         gameRepo.deleteById(id);
     }
 
+    public List<Game> getByStudio(String studio) {
+        return gameRepo.findByStudio(studio);
+    }
+
+    public List<Game> getByRating(Integer ersbRating) {
+        return gameRepo.findByErsbRating(ersbRating);
+    }
+
+    public List<Game> getByTitle(String title) {
+        return gameRepo.findByTitle(title);
+    }
+
 }
