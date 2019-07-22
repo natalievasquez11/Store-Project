@@ -7,7 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@JsonIgnoreProperties({"hibernateLateInitializer", "handler"})
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name="console")
 public class Console {
     @Id
@@ -26,7 +26,6 @@ public class Console {
     @NotNull
     private Double price;
     @NotNull
-    @Length(max=11)
     private Integer quantity;
 
     public Integer getConsoleId() {
