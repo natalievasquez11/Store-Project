@@ -38,7 +38,7 @@ public class GameServiceLayer {
         return gameRepo.findByStudio(studio);
     }
 
-    public List<Game> getByRating(Integer ersbRating) {
+    public List<Game> getByRating(String ersbRating) {
         return gameRepo.findByErsbRating(ersbRating);
     }
 

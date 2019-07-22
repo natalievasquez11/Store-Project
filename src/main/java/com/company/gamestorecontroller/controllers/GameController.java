@@ -2,6 +2,7 @@ package com.company.gamestorecontroller.controllers;
 
 import com.company.gamestorecontroller.dto.Game;
 import com.company.gamestorecontroller.service.GameServiceLayer;
+//import com.sun.org.apache.xpath.internal.operations.String;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -46,17 +47,17 @@ public class GameController {
     }
 
     @RequestMapping(value="/studio/{studio}", method= RequestMethod.GET)
-    public List<Game> getStudio(String studio) {
+    public List<Game> getStudio(@PathVariable String studio) {
         return gameService.getByStudio(studio);
     }
 
-    @RequestMapping(value="/rating/{rating}", method= RequestMethod.GET)
-    public List<Game> getRating(Integer ersbRating) {
+    @RequestMapping(value="/rating/{ersbRating}", method= RequestMethod.GET)
+    public List<Game> getRating(@PathVariable String ersbRating) {
         return gameService.getByRating(ersbRating);
     }
 
     @RequestMapping(value="/title/{title}", method= RequestMethod.GET)
-    public List<Game> getTitle(String title) {
+    public List<Game> getTitle(@PathVariable String title) {
         return gameService.getByTitle(title);
     }
 
