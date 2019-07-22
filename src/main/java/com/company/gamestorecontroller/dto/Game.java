@@ -26,7 +26,6 @@ public class Game {
     @NotNull
     @Length(max=50)
     private String studio;
-    @Length(max=11)
     private Integer quantity;
 
     public Integer getGameId() {
