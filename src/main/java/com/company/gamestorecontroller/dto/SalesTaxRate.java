@@ -1,4 +1,4 @@
-package com.company.gamestorecontroller;
+package com.company.gamestorecontroller.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.validator.constraints.Length;
